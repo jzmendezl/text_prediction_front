@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  /* background-image: url(./assets/cool-background.png); */
+  background-color: #5991f8;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.secWriteText {
+  width: 100vw;
+}
+
+.titleText {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+.writeText {
+  width: 828px;
+  height: 278px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  outline: none;
+  background: rgba(217, 217, 217, 0.33);
+  border-radius: 20px;
+  color: #000;
+}
+
+.areaText {
+  width: 828px;
+  height: 278px;
+  margin: 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  outline: none;
+  background: none;
+  border-radius: 20px;
+  color: #000;
+  overflow: auto;
+  padding: 25px;
+}
+
+.btnDivEnter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.btnEnter {
+  margin-left: 750px;
+  padding: 13px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.subTitleFeed {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  padding-left: 15px;
+}
+
+.predictWords {
+  width: 828px;
+  height: 80px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  outline: none;
+  background: rgba(217, 217, 217, 0.33);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btnPredict {
+  /* width: 47px; */
+  /* height: 47px; */
+  background: #63606062;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  /* outline: none; */
+  margin-inline: 5px;
+  cursor: pointer;
+}
+
+.btnPredict:hover {
+  color: #636060;
+}
+
+.btnPredict:active {
+  background: #636060;
+}
+
+.distributionBoard {
+  width: 828px;
+  /* height: 66px; */
+  margin: 0 auto;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  outline: none;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.titleDist {
+  margin-bottom: 20px;
+}
+
+.keyboardDist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 0 0;
+  width: 100%;
+}
+
+.keys {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnNext {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.btnNext:hover {
+  fill: #636060;
+}
+
+.btnKeyboard {
+  width: 828px;
+  height: 250px;
+  margin: 0;
+  border: none;
+  border-radius: 10px;
+  /* padding: 1rem; */
+  font-size: 1.5rem;
+  font-weight: 700;
+  outline: none;
+  background: rgba(217, 217, 217, 0.33);
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnKey {
+  width: 72px;
+  height: 72px;
+  /* aspect-ratio: 1; */
+  border: none;
+  /* border-radius: 10px; */
+  font-size: 1.5rem;
+  font-weight: 700;
+  outline: none;
+  margin-inline: 5px;
+  background: #63606062;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 1px;
+  width: 100%;
+  height: 100%;
+  padding: 2px 2px;
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: #d1d1d1;
+}
+
+.btnKey:hover {
+  background: #5a4e4e;
+}
+
+.btnKey:active {
+  background: #636060;
+}
+
+.backBtn {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btnSpace {
+  width: 227px;
+  height: 47px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  outline: none;
+  background: #63606062;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.btnSpace:hover {
+  background: #5a4e4e;
+}
+
+.btnSpace:active {
+  background: #636060;
+}
+
+.selectDist {
+  width: 828px;
+  height: 66px;
+  outline: none;
+  border-radius: 20px;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
