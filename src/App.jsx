@@ -12,7 +12,7 @@ function App() {
     const getLayouts = async () => {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/layouts`)
       const res = await response.json()
-      setLayouts(res.data)
+      setLayouts(res.data?.layouts ?? [])
       if (!distribution) {
         let localDistribution = JSON.parse(localStorage.getItem('distribution'))
         if (!localDistribution) localDistribution = res.data[0]
@@ -20,6 +20,7 @@ function App() {
       }
     }
     getLayouts()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
 
@@ -33,7 +34,7 @@ function App() {
     })
 
     const res = await response.json()
-    return res.data.prediction
+    return res.data?.prediction ?? []
   }
 
   useEffect(() => {
