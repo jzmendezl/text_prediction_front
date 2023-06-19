@@ -25,7 +25,7 @@ function App() {
 
 
   async function predict(text, layout) {
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/predict`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/predict?limit=10`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
