@@ -101,20 +101,15 @@ function App() {
       <section className='secPredictWords'>
         <p className='titleText'>Predict Words</p>
         <div className='predictWords'>
-          {predictWords && predictWords.length > 0 ? (
-            predictWords.slice(0, 3).map(({ probability, word }, index) => (
-              <button
-                className='btnPredict'
-                key={index}
-                onClick={() => addWordToText(word)}
-              >
-                {/* {word + ' ' + probability * 100 + '%'} */}
-                {`${word} ${(probability * 100).toFixed(2)}%`}
-              </button>
-            ))
-          ) : (
-            <p className='noPredict'>Loading...</p>
-          )}
+          {predictWords.slice(0, 3).map(({ probability, word }, index) => (
+            <button
+              className='btnPredict'
+              key={index}
+              onClick={() => addWordToText(word)}
+            >
+              {`${word} ${(probability * 100).toFixed(2)}%`}
+            </button>
+          ))}
         </div>
       </section>
 
