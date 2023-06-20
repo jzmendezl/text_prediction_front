@@ -15,7 +15,7 @@ function App() {
       setLayouts(res.data?.layouts ?? [])
       if (!distribution) {
         let localDistribution = JSON.parse(localStorage.getItem('distribution'))
-        if (!localDistribution) localDistribution = res.data[0]
+        if (!localDistribution) localDistribution = res.data?.layouts[0]
         setDistribution(localDistribution)
       }
     }
