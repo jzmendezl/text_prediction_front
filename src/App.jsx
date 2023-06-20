@@ -59,6 +59,16 @@ function App() {
     setText('')
   }
 
+  const handleSpace = async (e) => {
+    if (e.key === ' ') {
+      e.preventDefault()
+      let prediction = await predict(text, distribution?.name)
+      if (prediction.length > 0) {
+        addWordToText(prediction[0].word)
+      }
+    }
+  }
+
   const press = (letter) => {
     let newText = text
     if (letter === 'Backspace') {
@@ -90,6 +100,7 @@ function App() {
             className='areaText'
             value={text}
             onChange={(e) => setText(e.target.value)}
+            onKeyDown={handleSpace}
           ></textarea>
           <div className='btnDivEnter'>
             <button className='btnEnter' onClick={handleSendFeed}>
