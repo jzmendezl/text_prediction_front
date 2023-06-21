@@ -65,6 +65,8 @@ function App() {
       let prediction = await predict(text, distribution?.name)
       if (prediction.length > 0) {
         addWordToText(prediction[0].word)
+      } else {
+        setText((prevText) => prevText + " ")
       }
     }
   }
